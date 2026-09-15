@@ -148,6 +148,25 @@ After successful deployment:
 2. See the deployed URL
 3. Visit the URL to verify deployment
 
+## Base Path Configuration
+
+**Important for GitHub Pages**: The `vite.config.js` must have the correct `base` path set to match your repository name.
+
+```javascript
+// vite.config.js
+export default defineConfig({
+  base: '/your-repo-name/',  // Must match your GitHub repository name
+  // ... other config
+});
+```
+
+If your repository is `username/device-analyzer`, set:
+```javascript
+base: '/device-analyzer/'
+```
+
+This ensures all asset paths (CSS, JS, images) are correctly prefixed when deployed to GitHub Pages.
+
 ## Troubleshooting
 
 ### Workflow Fails
