@@ -140,10 +140,18 @@ type DiagnosticResult = {
 
 The application is designed for static hosting:
 
-1. Build: `npm run build`
-2. Deploy the `dist/` directory
-3. No server configuration needed
-4. Works with hash-based routing
+1. **Configure the base path** in `vite.config.js`:
+   ```javascript
+   base: '/your-repo-name/'
+   ```
+   Replace `your-repo-name` with your actual GitHub repository name.
+
+2. Build: `npm run build`
+3. Deploy the `dist/` directory
+4. No server configuration needed
+5. Works with GitHub Pages subpath routing
+
+**Important**: The `base` path in `vite.config.js` must match your repository name for GitHub Pages deployment to work correctly.
 
 ### GitHub Actions
 
